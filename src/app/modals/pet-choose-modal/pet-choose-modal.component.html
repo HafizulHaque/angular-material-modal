@@ -1,0 +1,29 @@
+<div class="h-100 d-flex flex-column justify-content-between">
+  <!-- dialog header  -->
+  <div
+    mat-dialog-title
+    class="border-bottom d-flex justify-content-between align-items-start"
+  >
+    <h1>Hello, {{data.userName}}</h1>
+    <button mat-button color="warn" (click)="onNoClick()" cdkFocusInitial>
+      X
+    </button>
+  </div>
+
+  <!-- dialog content  -->
+  <div mat-dialog-content>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="favPet"
+      placeholder="Enter your favourite pet name..."
+    />
+  </div>
+
+  <!-- dialog action  -->
+  <div mat-dialog-actions class="border-top d-flex justify-content-end">
+    <button mat-raised-button color="primary" [mat-dialog-close]="favPet">
+      submit
+    </button>
+  </div>
+</div>
